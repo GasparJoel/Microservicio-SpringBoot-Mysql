@@ -24,6 +24,7 @@ public class ClientImpl implements ICliente {
         return clienteDao.save(cliente);
     }
 
+    // se coloca readOnly quiere decir que es una consulta solo de lectura
     @Override
     @Transactional(readOnly = true)
     public Cliente findById(Integer id) {
